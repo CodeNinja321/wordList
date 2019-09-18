@@ -2,7 +2,7 @@ codeunit 50100 cuTest
 {
     trigger OnRun()
     begin
-        FileName := 'C:\Users\Djóni\Desktop\Scraper\words.json';
+        FileName := './words.json';
 
         MyFile := FileMgt.BLOBImport(TempBlob, 'Test');
 
