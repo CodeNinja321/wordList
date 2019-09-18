@@ -16,13 +16,12 @@ codeunit 50100 cuTest
             JsonArray.Get(i, JsonToken);
             JsonObject := JsonToken.AsObject();
             myid := GetJsonToken(JsonObject, 'fo').AsValue.AsText;
-            myJoke := GetJsonToken(JsonObject, 'en').AsValue.AsText;
-            if myJoke <> '' then begin
+            myText := GetJsonToken(JsonObject, 'en').AsValue.AsText;
+            if myText <> '' then begin
                 theTable.FO := myid;
                 if not theTable.Insert(true) then
                     exit;
-                //theTable.SetMyJoke((myJoke));
-                theTable.EN := myJoke;
+                theTable.EN := myText;
                 theTable.Modify(true);
             end;
         end;
@@ -39,7 +38,7 @@ codeunit 50100 cuTest
         i: integer;
         theTable: Record myWordTable;
         myid: Text;
-        myJoke: Text;
+        myText: Text;
         MyFile: Text;
         StreamInTest: InStream;
         Buffer: Text;

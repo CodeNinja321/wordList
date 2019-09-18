@@ -4,76 +4,74 @@ pageextension 50101 RCExt extends "Headline RC Order Processor"
     {
         addafter(Control2)
         {
-            field(Headline1; jokeText1) { }
-            field(Headline2; jokeText2) { }
-            field(Headline3; jokeText3) { }
-            field(Headline4; jokeText4) { }
-            field(Headline5; jokeText5) { }
-            field(Headline6; jokeText6) { }
-            field(Headline7; jokeText7) { }
-            field(Headline8; jokeText8) { }
-            field(Headline9; jokeText9) { }
-            field(Headline10; jokeText10) { }
+            field(Headline1; Text1) { }
+            field(Headline2; Text2) { }
+            field(Headline3; Text3) { }
+            field(Headline4; Text4) { }
+            field(Headline5; Text5) { }
+            field(Headline6; Text6) { }
+            field(Headline7; Text7) { }
+            field(Headline8; Text8) { }
+            field(Headline9; Text9) { }
+            field(Headline10; Text10) { }
         }
     }
 
     var
         myTable: Record MyWordTable;
-        myInt: Integer;
-        jokeStream: InStream;
-        jokeText1: Text;
-        jokeText2: Text;
-        jokeText3: Text;
-        jokeText4: Text;
-        jokeText5: Text;
-        jokeText6: Text;
-        jokeText7: Text;
-        jokeText8: Text;
-        jokeText9: Text;
-        jokeText10: Text;
+        Text1: Text;
+        Text2: Text;
+        Text3: Text;
+        Text4: Text;
+        Text5: Text;
+        Text6: Text;
+        Text7: Text;
+        Text8: Text;
+        Text9: Text;
+        Text10: Text;
 
 
     trigger OnAfterGetCurrRecord()
     begin
         if myTable.FindFirst() then begin
             myTable.Next(Random(myTable.Count));
-            jokeText1 := myTable.FO + ' - ' + myTable.EN;
+            Text1 := myTable.FO + ' - ' + myTable.EN;
         end;
         if myTable.FindFirst() then begin
             myTable.Next(Random(myTable.Count));
-            jokeText2 := myTable.FO + ' - ' + myTable.EN;
+            Text2 := myTable.FO + ' - ' + myTable.EN;
         end;
         if myTable.FindFirst() then begin
             myTable.Next(Random(myTable.Count));
-            jokeText3 := myTable.FO + ' - ' + myTable.EN;
+            Text3 := myTable.FO + ' - ' + myTable.EN;
         end;
         if myTable.FindFirst() then begin
             myTable.Next(Random(myTable.Count));
-            jokeText4 := myTable.FO + ' - ' + myTable.EN;
+            Text4 := myTable.FO + ' - ' + myTable.EN;
         end;
         if myTable.FindFirst() then begin
             myTable.Next(Random(myTable.Count));
-            jokeText5 := myTable.FO + ' - ' + myTable.EN;
+            Text5 := myTable.FO + ' - ' + myTable.EN;
         end;
         if myTable.FindFirst() then begin
             myTable.Next(Random(myTable.Count));
-            jokeText6 := myTable.FO + ' - ' + myTable.EN;
+            Text6 := myTable.FO + ' - ' + myTable.EN;
         end;
         if myTable.FindFirst() then begin
             myTable.Next(Random(myTable.Count));
-            jokeText7 := myTable.FO + ' - ' + myTable.EN;
+            Text7 := myTable.FO + ' - ' + myTable.EN;
         end;
         if myTable.FindFirst() then begin
             myTable.Next(Random(myTable.Count));
-            jokeText8 := myTable.FO + ' - ' + myTable.EN;
+            Text8 := myTable.FO + ' - ' + myTable.EN;
         end;
         if myTable.FindFirst() then begin
             myTable.Next(Random(myTable.Count));
-            jokeText9 := myTable.FO + ' - ' + myTable.EN;
+            Text9 := myTable.FO + ' - ' + myTable.EN;
         end;
         if myTable.FindFirst() then begin
             myTable.Next(Random(myTable.Count));
-            jokeText10 := myTable.FO + ' - ' + myTable.EN;
+            Text10 := myTable.FO + ' - ' + myTable.EN;
         end;
     end;
 
